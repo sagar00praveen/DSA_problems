@@ -1,26 +1,29 @@
-let arr =[1,3,5,6,7,8];
-console.log(arr[0]);// index 0
-console.log(arr[1]);// index 1
-console.log(arr[2]); //index 2
-console.log(arr[3]); //index 3
-console.log(arr[4]); //index 4
-console.log(arr[5]); //index 5
-console.log(arr[6]); //index 6
-console.log(arr[7]); //index 7
-console.log(arr[8]); //index 8
+// O(1) - Constant Time Complexity Examples
+// The time it takes is CONSTANT, no matter the input size.
 
-/*
-output:
-3
-5
-6
-7
-8
-undefined
-undefined
-undefined*/
- 
+const largeArray = new Array(1000000).fill(0); // Imagine a huge array
 
-for (i=0;i<6;i++){
-   console.log(arr[i]);
-}
+// 1. Direct Access by Index (O(1))
+// Getting the 5th element takes 1 step, whether array has 10 or 10M items.
+console.log(largeArray[2]);
+
+// 2. Object / Map Lookup (O(1) on average)
+const user = {
+   "id": 123,
+   "name": "Sagar",
+   "role": "Admin"
+};
+// Accessing a property is instant. It doesn't scan the whole object.
+console.log(user.name);
+
+// 3. Basic Arithmetic (O(1))
+const a = 10;
+const b = 20;
+const sum = a + b; // Takes constant time
+console.log(sum);
+
+// 4. Push/Pop from END of Array (O(1))
+const dynamicArr = [1, 2, 3];
+dynamicArr.push(4); // Only touches the end. Fast!
+dynamicArr.pop();   // Only removes the end. Fast!
+console.log(dynamicArr);
